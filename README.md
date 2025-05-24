@@ -29,7 +29,8 @@
 
 ---
 
-### 📫 Контакты
+### 📫 Контакты и профили на платформах
 
 - Telegram: [@ShapkinAlexandr](https://t.me/ShapkinAlexandr)
 - Email: shapkin.alexandr.sergeevich@gmail.com
+- LeetCode: [leetcode.com/AlexandrShapkin](https://leetcode.com/u/AlexandrShapkin/)
