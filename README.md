@@ -7,7 +7,7 @@
 ### 🔧 Мой стек
 
 - **Языки:** Go, TypeScript, JavaScript, Python
-- **Инструменты:** Docker, Git, Linux
+- **Инструменты:** Docker, Git, Linux, Ansible
 - **Базы данных:** PostgreSQL, Redis
 - **IDE:** VS Code
 
@@ -16,6 +16,7 @@
 ### 🚀 Проекты
 
 - [go-auth-lab](https://github.com/AlexandrShapkin/go-auth-lab) — лабораторный проект на Go для практики различных способов аутентификации: Basic Auth, cookie-based сессии, JWT-сессии, Bearer-токены. 🛠️ Активная разработка.
+- [homelab-infra](https://github.com/AlexandrShapkin/homelab-infra) — автоматизированная настройка домашнего сервера с использованием Ansible и Docker. 🛠️ Активная разработка.
 - [ToDoAppServer](https://github.com/AlexandrShapkin/ToDoAppServer) — серверная часть приложения ToDo на TypeScript. ⚠️ Архивный, не поддерживается.
 - [ToDoAppClient](https://github.com/AlexandrShapkin/ToDoAppClient) — клиентская часть приложения ToDo на TypeScript. ⚠️ Архивный, не поддерживается.
 
