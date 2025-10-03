@@ -32,3 +32,4 @@
 - Telegram: [@ShapkinAlexandr](https://t.me/ShapkinAlexandr)
 - Email: shapkin.alexandr.sergeevich@gmail.com
 - LeetCode: [leetcode.com/AlexandrShapkin](https://leetcode.com/u/AlexandrShapkin/)
+- Домашний GitLab: [https://gitlab.alexandrshapkin.ru/AlexandrShapkin](https://gitlab.alexandrshapkin.ru/AlexandrShapkin) (может быть недоступен!)
