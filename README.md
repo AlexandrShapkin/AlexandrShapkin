@@ -19,14 +19,6 @@
 
 ---
 
-### 📈 Статистика GitHub
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AlexandrShapkin&layout=compact)
-
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=AlexandrShapkin&show_icons=true)
-
----
-
 ### 📫 Контакты и профили на платформах
 
 - Telegram: [@ShapkinAlexandr](https://t.me/ShapkinAlexandr)
