@@ -16,12 +16,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
+      - name: Install Eisvogel template
+        run: |
+          wget -O eisvogel.tex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+
       - name: Convert Markdown to PDF
         run: |
           pandoc resume.md -o assets/resume.pdf \
             --from markdown \
             --pdf-engine=xelatex \
-            --template eisvogel \
+            --template eisvogel.tex \
             --variable urlcolor=blue \
             --metadata title="Резюме — Шапкин Александр"
 
