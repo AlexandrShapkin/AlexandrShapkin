@@ -1,0 +1,7 @@
+title: "Резюме — Шапкин Александр"
+theme: jekyll-theme-minimal
+markdown: kramdown
+show_downloads: false
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
