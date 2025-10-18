@@ -18,7 +18,7 @@ jobs:
 
       - name: Install Eisvogel template
         run: |
-          wget -O eisvogel.tex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+          wget -O eisvogel.tex https://raw.githubusercontent.com/enhuiz/eisvogel/master/eisvogel.tex
 
       - name: Convert Markdown to PDF
         run: |
