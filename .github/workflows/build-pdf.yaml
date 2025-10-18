@@ -14,7 +14,16 @@ jobs:
       - name: Install Pandoc and LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic fonts-source-sans-pro
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+      - name: Install fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-fonts-extra 
+
+      - name: Rebuild the font cache
+        run: |
+          sudo texhash    
 
       - name: Install Eisvogel template
         run: |
