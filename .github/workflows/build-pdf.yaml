@@ -31,7 +31,7 @@ jobs:
 
       - name: Convert Markdown to PDF
         run: |
-          pandoc resume.md -o assets/resume.pdf \
+          pandoc resume.md -o resume.pdf \
             --from markdown \
             --pdf-engine=xelatex \
             --template eisvogel.tex \
