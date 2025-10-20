@@ -14,10 +14,19 @@ jobs:
       - name: Install wkhtmltopdf
         run: sudo apt-get update && sudo apt-get install -y wkhtmltopdf
 
+      - name: Debug repo contents
+        run: ls -R
+
       - name: Convert HTML to PDF
         run: |
           mkdir -p assets
-          wkhtmltopdf --enable-local-file-access file://$(pwd)/index.html assets/resume.pdf
+          HTML_FILE=$(find . -maxdepth 2 -type f -name "index.html" -o -name "resume.html" | head -n 1)
+          if [ -z "$HTML_FILE" ]; then
+            echo "❌ HTML resume file not found"
+            exit 1
+          fi
+          echo "Converting $HTML_FILE → assets/resume.pdf"
+          wkhtmltopdf --enable-local-file-access "file://$(realpath $HTML_FILE)" assets/resume.pdf
 
       - name: Commit PDF
         run: |
