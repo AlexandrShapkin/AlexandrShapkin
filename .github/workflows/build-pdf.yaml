@@ -24,9 +24,11 @@ jobs:
           mkdir -p assets
           node -e "
           import puppeteer from 'puppeteer';
-          const fs = (await import('fs')).default;
+          import fs from 'fs';
           const htmlFile = fs.existsSync('index.html') ? 'index.html' : 'resume.html';
-          const browser = await puppeteer.launch();
+          const browser = await puppeteer.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+          });
           const page = await browser.newPage();
           await page.goto('file://' + process.cwd() + '/' + htmlFile, { waitUntil: 'networkidle0' });
           await page.pdf({
@@ -36,6 +38,7 @@ jobs:
             margin: { top: '12mm', bottom: '12mm', left: '12mm', right: '12mm' }
           });
           await browser.close();
+          console.log('✅ PDF generated at assets/resume.pdf');
           "
 
       - name: Commit PDF
