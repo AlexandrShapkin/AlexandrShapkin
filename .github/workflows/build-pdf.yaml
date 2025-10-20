@@ -11,22 +11,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install wkhtmltopdf
-        run: sudo apt-get update && sudo apt-get install -y wkhtmltopdf
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Debug repo contents
-        run: ls -R
+      - name: Install Puppeteer
+        run: npm install puppeteer
 
-      - name: Convert HTML to PDF
+      - name: Generate PDF
         run: |
           mkdir -p assets
-          HTML_FILE=$(find . -maxdepth 2 -type f -name "index.html" -o -name "resume.html" | head -n 1)
-          if [ -z "$HTML_FILE" ]; then
-            echo "❌ HTML resume file not found"
-            exit 1
-          fi
-          echo "Converting $HTML_FILE → assets/resume.pdf"
-          wkhtmltopdf --enable-local-file-access "file://$(realpath $HTML_FILE)" assets/resume.pdf
+          node -e "
+          import puppeteer from 'puppeteer';
+          const fs = (await import('fs')).default;
+          const htmlFile = fs.existsSync('index.html') ? 'index.html' : 'resume.html';
+          const browser = await puppeteer.launch();
+          const page = await browser.newPage();
+          await page.goto('file://' + process.cwd() + '/' + htmlFile, { waitUntil: 'networkidle0' });
+          await page.pdf({
+            path: 'assets/resume.pdf',
+            format: 'A4',
+            printBackground: true,
+            margin: { top: '12mm', bottom: '12mm', left: '12mm', right: '12mm' }
+          });
+          await browser.close();
+          "
 
       - name: Commit PDF
         run: |
