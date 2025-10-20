@@ -17,7 +17,7 @@ jobs:
       - name: Convert HTML to PDF
         run: |
           mkdir -p assets
-          wkhtmltopdf index.html assets/resume.pdf
+          wkhtmltopdf file://$(pwd)/index.html assets/resume.pdf
 
       - name: Commit PDF
         run: |
