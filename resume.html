@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Шапкин Александр — Резюме</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0b6b4a;
+      --muted:#6b7280;
+      --border:rgba(15,23,42,0.06);
+      --max-width:900px;
+      --radius:12px;
+      --gap:18px;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:var(--sans);
+      background:var(--bg);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:22px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(11,22,40,0.06);
+      padding:22px;
+      border:1px solid var(--border);
+    }
+    .header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:16px;
+    }
+    .photo{
+      width:150px;
+      height:150px;
+      border-radius:18%;
+      object-fit:cover;
+      flex:0 0 150px;
+      box-shadow:0 6px 18px rgba(11,22,40,0.06);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .title{
+      flex:1;
+      min-width:0;
+    }
+    h1{
+      margin:0 0 6px 0;
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+    .role{
+      margin:0;
+      font-weight:700;
+      color:var(--accent);
+      font-size:13px;
+    }
+    .contacts{
+      margin-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .contacts a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .main{
+      min-width:0;
+    }
+
+    section{
+      background:transparent;
+      padding:14px 12px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+
+    .section-title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:8px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-size:14px;
+      color:#0f1724;
+    }
+
+    .muted{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .experience-item{
+      padding:10px 0;
+      border-top:1px dashed rgba(15,23,42,0.04);
+    }
+    .experience-item:first-child{
+      border-top:0;
+      padding-top:0;
+    }
+    .job-head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .job-title{
+      font-weight:700;
+      font-size:14px;
+      margin:0;
+    }
+    .job-meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+    .bullets{
+      margin:8px 0 0 0;
+      padding-left:18px;
+      color:#111827;
+      font-size:13px;
+      line-height:1.45;
+    }
+    ul{ margin:0; padding-left:18px; }
+
+    .sidebar{
+      background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.9));
+      border-radius:10px;
+      padding:14px;
+      border:1px solid var(--border);
+      min-height:200px;
+    }
+    .skill-list{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:6px;
+    }
+    .skill{
+      display:flex;
+      justify-content:space-between;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(11,107,74,0.08);
+      color:var(--accent);
+      font-weight:600;
+      font-size:12px;
+    }
+    .section-small{
+      font-size:13px;
+      color:var(--muted);
+    }
+    .cert-list{ margin:6px 0 0 0; padding-left:18px; color:var(--muted); font-size:13px;}
+    .about{ font-size:13px; color:#111827; line-height:1.5; }
+
+    @media (max-width:880px){
+      .grid{ grid-template-columns: 1fr; }
+      .sidebar{ order:2; margin-top:8px; }
+      .header{ align-items:flex-start; gap:12px; }
+      .photo{ width:120px; height:120px; flex:0 0 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <img class="photo" src="https://github.com/AlexandrShapkin.png" alt="Александр Шапкин">
+        <div class="title">
+          <h1>Шапкин Александр Сергеевич</h1>
+          <p class="role">IT-специалист</p>
+          <div class="contacts">
+            <div>Номер телефона: <span class="muted">+7 929 324-46-04</span></div>
+            <div>Email: <a href="mailto:shapkin.alexandr.sergeevich@gmail.com">shapkin.alexandr.sergeevich@gmail.com</a></div>
+            <div>Telegram: <a href="https://t.me/ShapkinAlexandr" target="_blank" rel="noopener noreferrer">t.me/ShapkinAlexandr</a></div>
+            <div>GitHub: <a href="https://github.com/AlexandrShapkin" target="_blank" rel="noopener noreferrer">github.com/AlexandrShapkin</a></div>
+            <div>Проживает: <span class="muted">Барнаул, Россия</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="main">
+          <section aria-labelledby="exp">
+            <div class="section-title">
+              <h2 id="exp">Опыт работы</h2>
+              <div class="muted">Актуально</div>
+            </div>
+
+            <div class="experience-item">
+              <div class="job-head">
+                <div>
+                  <p class="job-title">ООО «Инсайрес» — Системный инженер</p>
+                  <div class="job-meta">Июль 2025 — Август 2025 · Москва</div>
+                </div>
+                <div class="pill">2 месяца</div>
+              </div>
+              <ul class="bullets">
+                <li>Разработка CI/CD пайплайнов GitLab CI</li>
+                <li>Поддержка и мониторинг серверов на базе РЕД ОС</li>
+                <li>Настройка логирования через Loki, Grafana и Promtail</li>
+                <li>Автоматизация обновлений сервисов (скрипты + Ansible)</li>
+                <li>Создание playbook’ов Ansible для развёртывания микросервисов</li>
+              </ul>
+              <div class="muted" style="margin-top:8px; font-size:12px">insyres.ru</div>
+            </div>
+          </section>
+
+          <section aria-labelledby="education">
+            <div class="section-title">
+              <h2 id="education">Образование</h2>
+            </div>
+            <div style="padding:6px 0;">
+              <p style="margin:0; font-weight:700">Новосибирский государственный технический университет</p>
+              <p class="muted" style="margin:4px 0 8px 0">Профессиональная переподготовка, Системное администрирование информационно-коммуникационных систем — 2025</p>
+
+              <p style="margin:0; font-weight:700">Алтайский государственный технический университет им. И.И. Ползунова</p>
+              <p class="muted" style="margin:4px 0 8px 0">Бакалавр, Информатика и вычислительная техника — 2025</p>
+
+              <p style="margin:0; font-weight:700">КГБПОУ «Алтайский политехнический техникум»</p>
+              <p class="muted" style="margin:4px 0 0 0">Наладчик аппаратного и программного обеспечения — 2019</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="skills">
+            <div class="section-title">
+              <h2 id="skills">Навыки</h2>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px;">
+              <div>
+                <p style="margin:0 0 6px 0; font-weight:700">Технологии</p>
+                <div class="section-small">Linux (RHEL, Debian, Ubuntu), Docker, Ansible, GitLab CI, Grafana, Prometheus, Loki, Nginx, Traefik</div>
+              </div>
+              <div>
+                <p style="margin:0 0 6px 0; font-weight:700">Сети</p>
+                <div class="section-small">OSI, TCP/IP, DHCP, DNS, VLAN, VPN (WireGuard), MikroTik, Cisco Packet Tracer</div>
+              </div>
+
+              <div>
+                <p style="margin:0 0 6px 0; font-weight:700">Языки программирования</p>
+                <div class="section-small">Go, Python, SQL</div>
+              </div>
+
+              <div>
+                <p style="margin:0 0 6px 0; font-weight:700">Базы данных</p>
+                <div class="section-small">PostgreSQL, Redis, MongoDB</div>
+              </div>
+
+              <div style="grid-column:1/-1; margin-top:6px;">
+                <p style="margin:0 0 6px 0; font-weight:700">Прочее</p>
+                <div class="section-small">REST API, JWT, DevOps, Bash, Git</div>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="certs">
+            <div class="section-title">
+              <h2 id="certs">Сертификаты</h2>
+            </div>
+            <ul class="cert-list">
+              <li>Stepik — Программирование на Golang (2025)</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="about">
+            <div class="section-title">
+              <h2 id="about">О себе</h2>
+            </div>
+            <div class="about">
+              Имею опыт работы с различными IT-системами и инфраструктурой: администрирование серверов, развёртывание и поддержка приложений, автоматизация процессов и обеспечение стабильной работы сервисов. Настраивал и сопровождал серверную инфраструктуру, строил CI/CD-процессы, мониторинг и логирование систем, обеспечивал отказоустойчивость и безопасность.
+              <br><br>
+              Стремлюсь развиваться в направлении комплексной работы с инфраструктурой, автоматизации процессов, контейнеризации и оркестрации сервисов, а также в более широких областях разработки и поддержки ПО. В работе ценю аккуратность, ясность и структурированность; умею взаимодействовать с коллегами и сохранять профессионализм в сложных ситуациях.
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar" aria-labelledby="side">
+          <div class="section-title">
+            <h2 id="side">Краткая информация</h2>
+            <div class="pill">IT / DevOps</div>
+          </div>
+
+          <div style="margin-top:8px;">
+            <p style="margin:0 0 6px 0; font-weight:700">Стек</p>
+            <div class="skill-list">
+              <div class="skill"><span>Языки</span><span class="muted">Go, Python, SQL</span></div>
+              <div class="skill"><span>Инструменты</span><span class="muted">Docker, Ansible, GitLab CI</span></div>
+              <div class="skill"><span>Мониторинг</span><span class="muted">Prometheus, Grafana, Loki</span></div>
+              <div class="skill"><span>СУБД</span><span class="muted">Postgres, Redis, MongoDB</span></div>
+              <div class="skill"><span>Сети</span><span class="muted">WireGuard, VLAN, MikroTik</span></div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <p style="margin:0 0 6px 0; font-weight:700">Языки</p>
+            <div class="section-small">Русский — родной<br>Английский — B1</div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <p style="margin:0 0 6px 0; font-weight:700">Образование и проф. переподготовка</p>
+            <div class="section-small">Бакалавр (Информатика) — 2025<br>Переподготовка: Системное администрирование — 2025</div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <p style="margin:0 0 6px 0; font-weight:700">Готовность к релокации</p>
+            <div class="section-small">Не рассматривается</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
