@@ -3,6 +3,9 @@ name: Build Resume PDF
 on:
   push:
     branches: [ main ]
+    paths:
+      - "resume.html"
+      - ".github/workflows/build-pdf.yaml"
 
 jobs:
   build:

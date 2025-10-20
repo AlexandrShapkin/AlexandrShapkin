@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "resume.html"
+      - ".github/workflows/deploy-resume.yaml"
 
 jobs:
   deploy:
