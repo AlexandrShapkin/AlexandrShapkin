@@ -32,7 +32,6 @@
 
     .wrap {
       max-width: 794px;
-      /* Ширина A4 при 96dpi */
       margin: 0 auto;
       padding: 0;
       box-sizing: border-box;
@@ -98,7 +97,6 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 280px;
-      /* чуть уже, чтобы гарантированно влезло */
       gap: 18px;
       margin-top: 18px;
     }
@@ -109,9 +107,9 @@
 
     section {
       background: transparent;
-      padding: 14px 12px;
+      padding: 4px 12px;
       border-radius: 10px;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
     }
 
     .section-title {
@@ -119,7 +117,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
 
     .section-title h2 {
@@ -151,8 +149,8 @@
     }
 
     .job-title {
-      font-weight: 700;
-      font-size: 14px;
+      font-weight: 600;
+      font-size: 13px;
       margin: 0;
     }
 
@@ -181,6 +179,8 @@
       padding: 14px;
       border: 1px solid var(--border);
       min-height: 200px;
+      height: auto;
+      max-height: 700px;
     }
 
     .skill-list {
@@ -199,7 +199,7 @@
 
     .pill {
       display: inline-block;
-      padding: 6px 10px;
+      padding: 6px 6px;
       border-radius: 999px;
       background: rgba(11, 107, 74, 0.08);
       color: var(--accent);
@@ -223,6 +223,12 @@
       font-size: 13px;
       color: #111827;
       line-height: 1.5;
+    }
+
+    .list-header {
+      margin: 0;
+      font-weight: 600;
+      font-size: 13px;
     }
 
     @media print {
@@ -250,8 +256,7 @@
 
       section,
       .experience-item,
-      .about
-      .wrap {
+      .about .wrap {
         page-break-inside: avoid;
         break-inside: avoid;
       }
@@ -325,15 +330,17 @@
               <h2 id="education">Образование</h2>
             </div>
             <div style="padding:6px 0;">
-              <p style="margin:0; font-weight:700">Новосибирский государственный технический университет</p>
+              <p class="list-header">Новосибирский государственный технический
+                университет</p>
               <p class="muted" style="margin:4px 0 8px 0">Профессиональная переподготовка, Системное администрирование
                 информационно-коммуникационных систем — 2025</p>
 
-              <p style="margin:0; font-weight:700">Алтайский государственный технический университет им. И.И. Ползунова
+              <p class="list-header">Алтайский государственный технический университет
+                им. И.И. Ползунова
               </p>
               <p class="muted" style="margin:4px 0 8px 0">Бакалавр, Информатика и вычислительная техника — 2025</p>
 
-              <p style="margin:0; font-weight:700">КГБПОУ «Алтайский политехнический техникум»</p>
+              <p class="list-header">КГБПОУ «Алтайский политехнический техникум»</p>
               <p class="muted" style="margin:4px 0 0 0">Наладчик аппаратного и программного обеспечения — 2019</p>
             </div>
           </section>
@@ -345,28 +352,28 @@
 
             <div style="display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px;">
               <div>
-                <p style="margin:0 0 6px 0; font-weight:700">Технологии</p>
+                <p class="list-header">Технологии</p>
                 <div class="section-small">Linux (RHEL, Debian, Ubuntu), Docker, Ansible, GitLab CI, Grafana,
                   Prometheus, Loki, Nginx, Traefik</div>
               </div>
               <div>
-                <p style="margin:0 0 6px 0; font-weight:700">Сети</p>
+                <p class="list-header">Сети</p>
                 <div class="section-small">OSI, TCP/IP, DHCP, DNS, VLAN, VPN (WireGuard), MikroTik, Cisco Packet Tracer
                 </div>
               </div>
 
               <div>
-                <p style="margin:0 0 6px 0; font-weight:700">Языки программирования</p>
+                <p class="list-header">Языки программирования</p>
                 <div class="section-small">Go, Python, SQL</div>
               </div>
 
               <div>
-                <p style="margin:0 0 6px 0; font-weight:700">Базы данных</p>
+                <p class="list-header">Базы данных</p>
                 <div class="section-small">PostgreSQL, Redis, MongoDB</div>
               </div>
 
               <div style="grid-column:1/-1; margin-top:6px;">
-                <p style="margin:0 0 6px 0; font-weight:700">Прочее</p>
+                <p class="list-header">Прочее</p>
                 <div class="section-small">REST API, JWT, DevOps, Bash, Git</div>
               </div>
             </div>
@@ -380,23 +387,6 @@
               <li>Stepik — Программирование на Golang (2025)</li>
             </ul>
           </section>
-
-          <section aria-labelledby="about">
-            <div class="section-title">
-              <h2 id="about">О себе</h2>
-            </div>
-            <div class="about">
-              Имею опыт работы с различными IT-системами и инфраструктурой: администрирование серверов, развёртывание и
-              поддержка приложений, автоматизация процессов и обеспечение стабильной работы сервисов. Настраивал и
-              сопровождал серверную инфраструктуру, строил CI/CD-процессы, мониторинг и логирование систем, обеспечивал
-              отказоустойчивость и безопасность.
-              <br><br>
-              Стремлюсь развиваться в направлении комплексной работы с инфраструктурой, автоматизации процессов,
-              контейнеризации и оркестрации сервисов, а также в более широких областях разработки и поддержки ПО. В
-              работе ценю аккуратность, ясность и структурированность; умею взаимодействовать с коллегами и сохранять
-              профессионализм в сложных ситуациях.
-            </div>
-          </section>
         </div>
 
         <aside class="sidebar" aria-labelledby="side">
@@ -406,7 +396,7 @@
           </div>
 
           <div style="margin-top:8px;">
-            <p style="margin:0 0 6px 0; font-weight:700">Стек</p>
+            <p style="margin:0 0 6px 0; font-weight:500">Стек</p>
             <div class="skill-list">
               <div class="skill"><span>Языки</span><span class="muted">Go, Python, SQL</span></div>
               <div class="skill"><span>Инструменты</span><span class="muted">Docker, Ansible, GitLab CI</span></div>
@@ -417,22 +407,42 @@
           </div>
 
           <div style="margin-top:14px;">
-            <p style="margin:0 0 6px 0; font-weight:700">Языки</p>
+            <p style="margin:0 0 6px 0; font-weight:500">Языки</p>
             <div class="section-small">Русский — родной<br>Английский — B1</div>
           </div>
 
           <div style="margin-top:14px;">
-            <p style="margin:0 0 6px 0; font-weight:700">Образование и проф. переподготовка</p>
-            <div class="section-small">Бакалавр (Информатика) — 2025<br>Переподготовка: Системное администрирование —
-              2025</div>
+            <p style="margin:0 0 6px 0; font-weight:500">Образование и проф. переподготовка</p>
+            <div class="section-small">
+              Бакалавр, Информатика и вычислительная техника — 2025
+              <br>
+              Профессиональная переподготовка, Системное администрирование
+              информационно-коммуникационных систем — 2025
+            </div>
           </div>
 
           <div style="margin-top:14px;">
-            <p style="margin:0 0 6px 0; font-weight:700">Готовность к релокации</p>
+            <p style="margin:0 0 6px 0; font-weight:500">Готовность к релокации</p>
             <div class="section-small">Не рассматривается</div>
           </div>
         </aside>
       </div>
+      <section aria-labelledby="about">
+        <div class="section-title">
+          <h2 id="about">О себе</h2>
+        </div>
+        <div class="about">
+          Имею опыт работы с различными IT-системами и инфраструктурой: администрирование серверов, развёртывание и
+          поддержка приложений, автоматизация процессов и обеспечение стабильной работы сервисов. Настраивал и
+          сопровождал серверную инфраструктуру, строил CI/CD-процессы, мониторинг и логирование систем, обеспечивал
+          отказоустойчивость и безопасность.
+          <br><br>
+          Стремлюсь развиваться в направлении комплексной работы с инфраструктурой, автоматизации процессов,
+          контейнеризации и оркестрации сервисов, а также в более широких областях разработки и поддержки ПО. В
+          работе ценю аккуратность, ясность и структурированность; умею взаимодействовать с коллегами и сохранять
+          профессионализм в сложных ситуациях.
+        </div>
+      </section>
     </div>
   </div>
 </body>
