@@ -25,7 +25,7 @@ jobs:
       - name: Prepare artifact
         run: |
           mkdir -p artifact
-          cp resume.html artifact/
+          cp resume.html artifact/index.html
 
       - name: Upload resume.html
         uses: actions/upload-pages-artifact@v3
