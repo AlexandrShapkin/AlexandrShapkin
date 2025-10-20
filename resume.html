@@ -239,6 +239,43 @@
         grid-template-columns: 1fr 280px !important;
       }
     }
+
+    @media print {
+
+      html,
+      body {
+        height: auto;
+        overflow: visible;
+      }
+
+      .card,
+      section,
+      .sidebar,
+      .experience-item,
+      .grid,
+      .wrap {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .card {
+        page-break-before: avoid;
+        page-break-after: avoid;
+      }
+
+      /* Гарантируем одну страницу */
+      body {
+        transform: scale(0.98);
+        /* немного уменьшаем масштаб для влезания */
+        transform-origin: top center;
+      }
+
+      /* Убираем лишние отступы и тени */
+      .card {
+        box-shadow: none;
+        border: none;
+      }
+    }
   </style>
 </head>
 
