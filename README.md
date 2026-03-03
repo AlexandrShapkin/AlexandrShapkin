@@ -17,7 +17,7 @@
   Я приглашаю всех желающих **ознакомиться с заметками** и, при желании, **вносить свои собственные через Pull Request**. Репозиторий: [knowledge](https://github.com/AlexandrShapkin/knowledge).  
 
 - **[go-auth-lab](https://github.com/AlexandrShapkin/go-auth-lab)** — лабораторный проект на Go для практики различных способов аутентификации. 🛑 Временно приостановлен.  
-- **[homelab-infra](https://github.com/AlexandrShapkin/homelab-infra)** — автоматизация настройки домашнего сервера с Ansible и Docker. 🔧 Разработка по мере необходимости.  
+- **[homelab-infra](https://github.com/AlexandrShapkin/homelab-infra)** — автоматизация настройки домашнего сервера с Ansible и Docker. 🛑 Приостановлен в связи с отсутствием места деплоя.  
 - **[docker-bta-server](https://github.com/AlexandrShapkin/docker-bta-server)** — скрипты и Dockerfile для сборки и публикации [Minecraft BTA](https://www.betterthanadventure.net/) в Docker Hub. 🔧 Поддержка по необходимости.  
 - **[multistack-lab](https://github.com/AlexandrShapkin/multistack-lab)** — лабораторный проект по работе с монорепозиторием и синхронизации частей (Go, Python) с CI. ✅ Завершён.  
 - **[go-file-download-test-task](https://github.com/AlexandrShapkin/go-file-download-test-task)** — тестовое задание: сервис менеджера загрузки файлов на Go. ✅ Завершён.  
